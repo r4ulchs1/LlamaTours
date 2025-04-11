@@ -1,0 +1,77 @@
+.mainContenedor{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.mainSobreNostros{
+    background-image: url('../img/SobreNostros/sobreNostros.jpeg');
+}
+
+.mainMision{
+    background-image: url('../img/SobreNostros/mision.jpg');
+}
+
+.mainVision{
+    background-image: url('../img/SobreNostros/vision.jpg');
+}
+
+.mainSobreNostros,
+.mainMision,
+.mainVision {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0 0;
+    color: white;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+
+.contenido{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    width: 43%;
+    height: auto;
+}
+
+.contenido h2{
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.contenido p{
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* SOBRE NOSOTROS */
+
+.sobreNostros{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* SOBRE NOSOTROS */
+
+/* MISION */
+
+.mainMision{
+    padding: 0;
+}
+.mision{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* MISION */
+
+/* VISION */
+
+.vision{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* VISION */

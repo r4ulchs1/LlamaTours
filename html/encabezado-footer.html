@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LlamaTours</title>
+    <!-- <link rel="stylesheet" href="../css/stylehead_footer.css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../html/index.html">
+                <img src="../img/llama.png"  width="125px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buscador.html">Viajes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="SobreNosotros.html">Sobre Nosotros</a></li>
+                    <li class="nav-item">
+                        <div id="mainDatosLogueado" style="display: none;">
+                            <div class="datosUsuario">
+                                <img src="../img/iconos/avatar-usuario.png" alt="" class="userlogged">
+                            </div>
+                            <div class="datosLogueado">
+                                <p class="p1">${usuario.nombre}</p>
+                                <p class="p2">${usuario.gmail}</p>
+                            </div>
+                        </div>
+                        <button id="btnIngresar" type="button" class="btn btn-warning" onclick="LoginToggle()">
+                        <img src="../img/iconos/ingresar.png" width="20px" alt="">
+                            Ingresar
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <footer class="bg-dark text-light text-center">
+            <div>
+                <img src="../img/llama.png" width="120px" alt="">
+            </div>
+            <div class="container card-group">
+                <div class="col-md-6">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Llama Tours</h2>
+                            <p class="text-secondary">Somos una destacada empresa de turismo con 15 años de experiencia en el mercado, especializada en ofrecer diversos viajes guiados al interior del Perú. Reconocida por Tripadvisor con el premio "Travelers' Choice Experiences" en el año 2019 por su excelencia en el servicio al cliente, la empresa se enorgullece de haber sido destacada en múltiples ocasiones por su compromiso con la calidad y la autenticidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Links Rapidos</h2>
+                            <ul class="list-group">
+                                <li><a class="link-secondary link-underline-opacity-0" href="index.html">Inicio</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="buscador.html">Viajes</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="contactanos.html">Contacto</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="../html/SobreNosotros.html">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Contactanos</h2>
+                            <ul class="list-group">
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/telefono-footer.png" width="20px" alt="">+51 980837493</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/correo-footer.png" width="20px" alt="">LlamaTours@viajes.com</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/ubicacion-footer.png" width="20px" alt="">Av. 28 de Julio - La Victoria - Lima</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <p class="text-secondary">Copyright &copy; 2024 All Rights Reserved by LlamaTours</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

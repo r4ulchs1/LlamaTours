@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../img/llamaBase.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pago.css">
+    <title>LlamaTours</title>
+    <link rel="icon" type="image/x-icon" href="../img/llamaBase.png">
+</head>
+<body>
+    <div id="cajitauwu">
+        <button onclick="abrirte()">hola</button>
+    </div>
+    <div class="backgroundPago" id="pagar">
+        <div class="mainModal">
+
+            <div class="headModal">
+                <div class="imghead">
+                    <a href="../html/index.html"><img src="../img/llama.png"  width="125px" alt=""></a>
+                </div>
+                <div class="exitHead">
+                    <button onclick="cerrarPago()"><img src="../img/iconos/cruz.svg" width="15px" alt=""></button>
+                </div>
+            </div>
+            <div class="espaciador"></div>
+            <div class="mainContenedor" >
+                <div class="contenedorDatos" id="contacto">
+                    <div class="contenedor">
+                
+                        <div class="mainDatosdeContacto" >
+                            <h2>Contacto de Viajero</h2>
+                            <div class="datosViajeros">
+                                <form id="form" action="#" method="post">
+                                    <div class="formDatosViajeros">
+                                        <label for="nombre">Nombres:</label><br>
+                                        <input type="text" id="nombre" name="nombre" required>
+                                    </div>
+                                        
+                                    
+                                    <div class="formDatosViajeros">
+                                        <label for="apellido">Apellidos:</label> <br>
+                                        <input type="text" id="apellido" name="apellido" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="correo">Correo Electrónico:</label> <br>
+                                        <input type="email" id="correo" name="correo" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="wsp">Número de WhatsApp:</label> <br>
+                                        <input type="tel" id="wsp" name="wsp" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="fecha-nacimiento">Fecha de Nacimiento:</label> <br>
+                                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mainImporte">
+                            <div class="importe">
+                                <div class="headImporte">
+                                    <div class="nombreCompra">
+                                        <p> Nombre de Viaje que se está comprando RESPECTIVAMENTE</p>
+                                        <p>fecha en la que se está comprando</p>
+                                    </div>
+                                    <div class="subTotal">
+                                        <p>S/. 399.90</p>
+                                    </div>
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="cuponImporte">
+                                    <div class="cupon">
+                                        <label for="">Promo Cupon</label><br>
+                                        <input type="xd" name="cupon" id="">
+                                        <button disabled> Aplicar</button>
+                                    </div>
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="subTotal">
+                                    <p>Subtotal</p>
+                                    <p>S/. 399.00</p> 
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="total">
+                                    <p>Total(Soles)</p>
+                                    <p>S/. 399.00</p>
+                                </div>
+        
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnContinuar">
+                        <button onclick="continuar()"> Continuar</button>
+                    </div>
+                </div>
+
+                <div class="mainContenedorPago">
+                    <div class="mainPago" id="Pago">
+                        <div class="return">
+                            <button onclick="regresarADatos()"><img src="../img/flecha-pequena-izquierda.png" width="15px" alt="">Regresar</button>
+                        </div>
+                        <div class="tajetaDatos">
+                            <h2>OA</h2>
+                        </div>
+                        <div class="detalleYtarjeta">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        function cerrarPago(){
+            var cerrar = document.getElementById('pagar');
+            var cajita = document.getElementById('cajitauwu');
+
+            cerrar.style.display = 'none'
+            cajita.style.display = 'block'
+        }
+
+        function abrirte(){
+            var cerrar = document.getElementById('pagar');
+            var cajita = document.getElementById('cajitauwu');
+
+            cerrar.style.display = 'block'
+            cajita.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

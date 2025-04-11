@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LlamaTours</title>
+    <link rel="icon" type="image/x-icon" href="../img/llamaBase.png">
+    <link rel="stylesheet" href="../css/stylehead_footer.css">
+    <link rel="stylesheet" href="../css/SobreNostros.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+    @media screen and (max-width:900px) {
+        .contenido{
+            width: 100%;
+            padding: 30px;
+        }
+
+        .contenido h2{
+            font-size: 50px;
+        }
+
+        .contenido p{
+            font-size: 20px;
+        }
+
+        #llamalog{
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        #llamalog img {
+            margin-top:80px;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    @media screen and (max-width:450px){
+        .sobreNosotrosContenido h2{
+            font-size: 25px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="mainHeader">
+                <div class="header">
+                    <a href="../html/index.html"><img src="../img/llama.png"  width="125px" alt=""></a>
+                    <input type="checkbox" id="menucheckbox">
+                    <label for="menucheckbox">
+                        <img src="../img/iconos/menu.png" alt="menú" class="menuIcono">
+                    </label>
+                    <div class="menu">
+                        <ul  id="menuu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="buscador.html">Viajes</a></li>
+                            <li><a href="contactanos.html">Contacto</a></li>
+                            <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                            <li id="change">
+                                <div id="mainDatosLogueado" style="display: none;">
+                                    <div class="datosUsuario">
+                                        <img src="../img/iconos/avatar-usuario.png" alt="" class="userlogged">
+                                    </div>
+                                    <div class="datosLogueado">
+                                        <p class="p1">${usuario.nombre}</p>
+                                        <p class="p2">${usuario.gmail}</p>
+                                    </div>
+                                </div>
+                                <button class="botoncito" id="btnIngresar"  onclick="LoginToggle()"><img src="../img/iconos/ingresar.png" width="20px" alt="">Ingresar</button>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+        </header>
+    
+        <div class="mainContenedor">
+            <div class="mainSobreNostros">
+                <div class="sobreNostros" >
+                    <div class="sobreNostrosoContenido contenido">
+                        <h2>SOBRE NOSOTROS</h2>
+                        <p>Somos una destacada empresa de turismo con 15 años de experiencia en el mercado, especializada en ofrecer diversos viajes guiados al interior del Perú. Reconocida por Tripadvisor con el premio "Travelers' Choice Experiences" en el año 2019 por su excelencia en el servicio al cliente, la empresa se enorgullece de haber sido destacada en múltiples ocasiones por su compromiso con la calidad y la autenticidad.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mainMision">
+                <div class="mision">
+                    <div class="misionContenido contenido">
+                        <h2>MISIÓN</h2>
+                        <p>Brindar experiencias de viaje auténticas y memorables por el Perú, con un enfoque en la calidad, la cultura y la sostenibilidad. A través de un servicio personalizado y de alta calidad, buscamos conectar a nuestros clientes con la riqueza natural, histórica y cultural del país, garantizando seguridad, confort y satisfacción en cada uno de nuestros recorridos. Promovemos el respeto por las comunidades locales y la protección del medio ambiente, fomentando un turismo responsable que deje una huella positiva en cada destino.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mainVision">
+                <div class="vision">
+                    <div class="visionContenido contenido">
+                        <h2>VISIÓN</h2>
+                        <p>Convertirnos en la empresa líder de turismo en Perú, reconocida a nivel mundial por nuestras experiencias únicas y sostenibles, nuestro compromiso con la autenticidad, y la excelencia en el servicio al cliente. Aspiramos a ser la primera opción para aquellos que desean descubrir las maravillas de Perú, promoviendo un turismo responsable que beneficie a las comunidades locales y preserve el patrimonio cultural y natural del país.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+<footer>
+    <div class="mainFooter">
+        <div class="footer">
+            <div class="headFooter">
+                <img src="../img/llama.png" width="120px" alt="">
+            </div>
+            <div class="footerContenido">
+                <div class="about footerTexto">
+                    <h2>Llama Tours</h2>
+                    <p>Somos una destacada empresa de turismo con 15 años de experiencia en el mercado, especializada en ofrecer diversos viajes guiados al interior del Perú. Reconocida por Tripadvisor con el premio "Travelers' Choice Experiences" en el año 2019 por su excelencia en el servicio al cliente, la empresa se enorgullece de haber sido destacada en múltiples ocasiones por su compromiso con la calidad y la autenticidad.</p>
+                </div>
+                <div class="footerLink footerTexto">
+                    <h2>Links Rapidos</h2>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="buscador.html">Viajes</a></li>
+                        <li><a href="contactanos.html">Contacto</a></li>
+                        <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footerContactanos footerTexto">
+                    <h2>Contactanos</h2>
+                    <ul>
+                        <li><a href="error.html"><img src="../img/iconos/telefono-footer.png" width="20px" alt="">+51 980837493</a></li>
+                        <li><a href="error.html"><img src="../img/iconos/correo-footer.png" width="20px" alt="">LlamaTours@viajes.com</a></li>
+                        <li><a href="error.html"><img src="../img/iconos/ubicacion-footer.png" width="20px" alt="">Av. 28 de Julio - La Victoria - Lima</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separador"></div>
+            <div class="footerFooter">
+                <div class="copyright">
+                    <p>Copyright &copy; 2024 All Rights Reserved by LlamaTours</p>
+                </div>
+                <div class="redesSociales">
+            </div>
+            
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <form class="login-form" id="loginUsuarios">
+        <div class="form">
+            <div class="cerrar-btn" onclick="LoginToggle()">&times;</div>
+            <h2>Iniciar Sesión</h2>
+    
+            <div class="form-elemento">
+                <input type="text" id="loginGmail" placeholder="Correo Electro" required>
+                <img class="img-form" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASZJREFUSEvt1cErBHEUwPHP3jlQSspNKf4JRzlLDlKKIgfl7LjlphxEUUoOkrMc/ROUs5JSHLizTzOaxuzOrmkum3f8zXvv+953pt801ByNmvvrL8A8mpisqO0BO7iKPllFd5iq2Dwtv8d0HvCZPD3Exh9B2drv4bMbpIA4m8UpRrsEPWMFN8j2KQQM4gNDLcARFkogl1jHGwbwnuS33eARy7hNEhdxgOEc6BWbuEjOZ3CG8TJA2ucE28lEoSqUhbqIUBFKQk1svIfV3ABtN8jmPWEN18lhqIgIdRFzOMZYgcauAGndecvxFkJLROjax1KH99MTIPq8ZDSEvpGSl98zoMsv9iftH1Bq7Jei2i+7uK53MVE6W+eEttd1xb7F5f31y6xF0RedUDYZkAb/FgAAAABJRU5ErkJggg=="/>
+            </div>
+    
+            <div class="form-elemento">
+                <input type="password" id="loginContrasenia" class="password" placeholder="password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+    
+            <div class="form-elemento">
+                <a href="#">Olvidé mi contraseña</a>
+            </div>
+    
+            <div class="form-elemento">
+                <button type="submit">Ingresar</button>
+            </div>
+    
+            <div class="form-elemento">
+                <label class="Registro">¿Nuevo usuario?</label>
+                <a id="regist" onclick="toggleForms()">Regístrate</a>
+            </div>
+        </div>
+    
+        <div id="llamalog">
+            <img src="../img/llamitaLogin.gif" alt="llama">
+        </div>
+    </form>
+    
+    <form class="registro-form" id="registroUsuarios">
+        <div class="form">
+            <div class="cerrar-btn" onclick="RegistroToggle()">&times;</div>
+            <h2>Regístrate</h2>
+    
+            <div class="form-elemento">
+                <input type="text" id="usrGmail" placeholder="Correo Electrónico">
+                <img class="img-form" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASZJREFUSEvt1cErBHEUwPHP3jlQSspNKf4JRzlLDlKKIgfl7LjlphxEUUoOkrMc/ROUs5JSHLizTzOaxuzOrmkum3f8zXvv+953pt801ByNmvvrL8A8mpisqO0BO7iKPllFd5iq2Dwtv8d0HvCZPD3Exh9B2drv4bMbpIA4m8UpRrsEPWMFN8j2KQQM4gNDLcARFkogl1jHGwbwnuS33eARy7hNEhdxgOEc6BWbuEjOZ3CG8TJA2ucE28lEoSqUhbqIUBFKQk1svIfV3ABtN8jmPWEN18lhqIgIdRFzOMZYgcauAGndecvxFkJLROjax1KH99MTIPq8ZDSEvpGSl98zoMsv9iftH1Bq7Jei2i+7uK53MVE6W+eEttd1xb7F5f31y6xF0RedUDYZkAb/FgAAAABJRU5ErkJggg=="/>
+            </div>
+    
+            <div class="form-elemento">
+                <input type="text" id="usrName" placeholder="Nombres y Apellidos">
+                <img class="img-form" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAURJREFUSEvF1L8rRXEYx/HXTWaEwSiZLIpVRgulKBaLzWLwa7QopURS/gRZ5FcW/wAlGWQiIykMKKX8OKdc3c69557bOW6+2znn+3zen+fp85ycKp9clfVVCujFIjp+DF1gDsdJBisBjGKTIjOfGMRBOUgSoB43aIgRuUMb3uIgSYDQ4U7CGPpwlBYwjeUEwBRW0wIGsJ8A6MdhWkAdrtEUI3CPdrykBYR1I9gqIRCmaAi7WVKUr+3B0s8efOASszj5iz1I0ij7PSmmmcTD4nKAZswEm9oVzLkTjRHaI85xihU8lHITBxgLBNeDfIcpquQ8YRx70culAJPBr2GtEtUSd4axXfg+CmjFFWpSAl4RavyOKwrYwERK8XzZfGBwIf8QBdyiJSPgDN1xgHfUZgQ8F4Yj2sFXRvEi4/+6aH/STNU7+AYkwS0ZwQsJ3gAAAABJRU5ErkJggg=="/>
+            </div>
+    
+            <div class="form-elemento">
+                <input type="text" id="usrPhone" placeholder="Numero de Celular">
+                <img class="img-form" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAURJREFUSEvF1L8rRXEYx/HXTWaEwSiZLIpVRgulKBaLzWLwa7QopURS/gRZ5FcW/wAlGWQiIykMKKX8OKdc3c69557bOW6+2znn+3zen+fp85ycKp9clfVVCujFIjp+DF1gDsdJBisBjGKTIjOfGMRBOUgSoB43aIgRuUMb3uIgSYDQ4U7CGPpwlBYwjeUEwBRW0wIGsJ8A6MdhWkAdrtEUI3CPdrykBYR1I9gqIRCmaAi7WVKUr+3B0s8efOASszj5iz1I0ij7PSmmmcTD4nKAZswEm9oVzLkTjRHaI85xihU8lHITBxgLBNeDfIcpquQ8YRx70culAJPBr2GtEtUSd4axXfg+CmjFFWpSAl4RavyOKwrYwERK8XzZfGBwIf8QBdyiJSPgDN1xgHfUZgQ8F4Yj2sFXRvEi4/+6aH/STNU7+AYkwS0ZwQsJ3gAAAABJRU5ErkJggg=="/>
+            </div>
+    
+            <div class="form-elemento">
+                <input type="password" class="password" id="usrContrasenia" placeholder="Repita su contraseña">
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+    
+            <div class="form-elemento">
+                <button type="submit">Registrarse</button>
+            </div>
+    
+            <div class="form-elemento">
+                <a id="regist" onclick="toggleForms()">Ya soy usuario</a>
+            </div>
+        </div>
+    
+        <div id="llamalog">
+            <img src="../img/llamitaLogin.gif" alt="llama">
+        </div>
+    </form>
+    
+    
+    
+    
+    <script src="../js/login.js"></script>
+    <script src="../js/usuarios.js"></script>
+
+
+    
+</body>
+</html>
