@@ -60,12 +60,10 @@ function renderizarUsuarioLogueado(usuario) {
     const cambiar = document.getElementById('change');
     cerrarsesion.id = "change";
     cerrarsesion.innerHTML = `
-        <div class="datosUsuario">
-            <img src="../img/iconos/avatar-usuario.png" alt="" class="userlogged">
-        </div>
-        <div class="datosLogueado">
-            <p class="p1">Hola! ${usuario.nombre}</p>
-            <p class="p2">${usuario.gmail}</p>
+        <img src="../img/iconos/avatar-usuario.png" alt="" class="userlogged">
+        <div>
+            <p>Hola! ${usuario.nombre}</p>
+            <p>${usuario.gmail}</p>
         </div>
         <button class="botoncito" id="btnIngresar" onclick="cerrarSesion()">
             Cerrar Sesión
