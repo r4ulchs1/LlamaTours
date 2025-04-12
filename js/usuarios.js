@@ -59,15 +59,22 @@ function renderizarUsuarioLogueado(usuario) {
     const cerrarsesion = document.createElement('li');
     const cambiar = document.getElementById('change');
     cerrarsesion.id = "change";
+    cerrarsesion.classList.add('nav-item','dropdown');
     cerrarsesion.innerHTML = `
-        <img src="../img/iconos/avatar-usuario.png" alt="" class="userlogged">
-        <div>
-            <p>Hola! ${usuario.nombre}</p>
-            <p>${usuario.gmail}</p>
-        </div>
-        <button class="botoncito" id="btnIngresar" onclick="cerrarSesion()">
-            Cerrar Sesión
-        </button>
+        <a class="nav-link dropdown-toggle gap-0" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+            <div class="d-inline-flex p-0 align-items-center ">
+                <img src="../img/iconos/avatar-usuario.png" style="width: 50px; height: 50px;">
+                <div class="d-inline-flex flex-column p-2">
+                    <p class="mb-0">${usuario.nombre}</p>
+                    <p class="mb-0">${usuario.gmail}</p>
+                </div>
+            </div>
+        </a>
+        <ul class="dropdown-menu bg-dark p-0 w-100">                            
+            <button id="btnIngresar" type="button" class="btn btn-warning w-100" onclick="cerrarSesion()">
+                Cerrar Sesion
+            </button>
+        </ul>
     `;
     const asd = document.getElementById('menuu');
     asd.replaceChild(cerrarsesion, cambiar);
@@ -83,8 +90,8 @@ function cerrarSesion() {
         const cambiar = document.getElementById('change');
         login.id = "change";
         login.innerHTML = `
-            <button class="botoncito" id="btnIngresar" onclick="LoginToggle()">
-                <img src="../img/iconos/ingresar.png" width="20px" alt="">
+            <button id="btnIngresar" type="button" class="btn btn-warning" onclick="LoginToggle()">
+                <img src="../img/iconos/ingresar.png" width="20px">
                 Ingresar
             </button>
         `;
