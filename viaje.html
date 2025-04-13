@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LlamaTours</title>
+<!-- 
+    <link rel="stylesheet" href="../css/viaje.css"> -->
+    <link rel="stylesheet" href="css/pago.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .headerr{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.378),rgba(6, 6, 6, 0.367)), url('../img/viaje/banner-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar headerr mb-4">
+        <div class="container d-flex flex-column text-light">
+            <a href="../html/index.html">
+                <img src="../img/llama.png"  width="200px" alt="">
+            </a>
+            <h1> Llama Tours</h1>
+            <h2 id="tituloViaje">Expedición a ....</h2>
+            <a href="buscador.html">
+                <button class="btn btn-warning">
+                    <img src="../img/iconos/flecha-regreso.png" alt="nofounded" >Regresar
+                </button>
+            </a> 
+        </div>
+    </div>
+
+    <div class="container gap-4 d-flex flex-column flex-md-row mb-4">
+        <div class="col-12 col-md-9">
+            <div class="card-group flex-column">
+                <div class="row">
+                    <img class="img-fluid img-thumbnail" id="featured" src="../img/viaje/placeholder-800x400.jpeg" alt="Imagen principal">
+                    <div class="">
+                        <img class="img-thumbnail w-25" src="../img/viaje/placeholder-800x400.jpeg" id="viaje-img1" alt="Miniatura 1" onclick="changeImage(this)">
+                        <img class="img-thumbnail w-25" src="../img/viaje/placeholder-800x400.jpeg" id="viaje-img2" alt="Miniatura 2" onclick="changeImage(this)">
+                        <img class="img-thumbnail w-25" src="../img/viaje/placeholder-800x400.jpeg" id="viaje-img3" alt="Miniatura 3" onclick="changeImage(this)">
+                    </div>
+                </div>
+                <div class="card flex-column">
+                    <h2 class="fs-1">Detalles del Tours: </h2>
+                    <p id="descripcionViaje">Descripción del viaje...</p>
+                    <p id="descripcionViaje-2">Descripción 2......</p>
+                    <p id="descripcionViaje-3">Descripción 3......</p>
+                </div>
+                <div class="card flex-column">
+                    <h2 class="fs-1">Expedición: </h2>
+                    <div class="">
+                        <h3>Día 1</h3>
+                        <p id="dia-1">Dia1.......</p>
+                    </div>
+                    <div class="">
+                        <h3>Día 2</h3>
+                        <p id="dia-2">dia 2........</p>
+                    </div>
+                </div>
+                <div class="card flex-column">
+                    <h2 class="fs-1">Recomendamos llevar:</h2> <br>
+                    <div id="listaEquipaje">
+                        <!-- Aquí se insertará la lista -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-12 col-md-3">
+            <div class="card-group flex-column">
+                <div class="row d-flex align-items-center justify-content-center mb-2 rounded-3 p-2">
+                    <h3>N° de Viajeros</h2>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-warning" id="resta">-</button>
+                        <input class="text-center border-0" style="width: 50px;" type="text" id="valor" value="1" readonly>
+                        <button class="btn btn-outline-warning" id="suma">+</button>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center mb-2 rounded-3 p-2">
+                    <h3>Selecione una fecha:</h3>
+                    <form id="formViaje" action="">
+                        <input type="text" id="date" class="flatpickr-input text-center" placeholder="DD-MM-YYYY" style="width: 100%;" required>
+                    </form>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center mb-2 rounded-3 p-2">
+                    <h3>Compruebe su viaje </h3>
+                    <div class="card border-0" style="
+                            background-image: url(../img/pasaje.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            width: auto;
+                            height: auto;">
+                        <div class="d-flex">
+                            <div class="w-50">
+                                <div class="" id="tituloTicket">titulo...</div>
+                                <div class="total">Precio <span></span></div>
+                                <div class="">Viajeros: <span id="viajerosDisplay">1</span></div>
+                            </div>
+                            <div class="w-50 d-flex flex-column align-items-end justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <img src="../img/llama.png" alt="Logo de LlamaTours" style="width: 50px;">
+                                    <span>LlamaTours</span>
+                                </div>
+                                <div class="importeTotal"><p></p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="reservarButton" type="button" onclick="abrirModal()" disabled>Reservar <img src="../img/iconos/candado-cerrado.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center">
+            <div>
+                <img src="../img/llama.png" width="120px" alt="">
+            </div>
+            <div class="card-group">
+                <div class="col-md-6">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Llama Tours</h2>
+                            <p class="text-secondary">Somos una destacada empresa de turismo con 15 años de experiencia en el mercado, especializada en ofrecer diversos viajes guiados al interior del Perú. Reconocida por Tripadvisor con el premio "Travelers' Choice Experiences" en el año 2019 por su excelencia en el servicio al cliente, la empresa se enorgullece de haber sido destacada en múltiples ocasiones por su compromiso con la calidad y la autenticidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Links Rapidos</h2>
+                            <ul class="list-group">
+                                <li><a class="link-secondary link-underline-opacity-0" href="index.html">Inicio</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="buscador.html">Viajes</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="contactanos.html">Contacto</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="../html/SobreNosotros.html">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-dark">
+                        <div class="card-body text-start">
+                            <h2 class="text-warning">Contactanos</h2>
+                            <ul class="list-group">
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/telefono-footer.png" width="20px" alt="">+51 980837493</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/correo-footer.png" width="20px" alt="">LlamaTours@viajes.com</a></li>
+                                <li><a class="link-secondary link-underline-opacity-0" href="error.html"><img src="../img/iconos/ubicacion-footer.png" width="20px" alt="">Av. 28 de Julio - La Victoria - Lima</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-secondary mb-0">Copyright &copy; 2024 All Rights Reserved by LlamaTours</p>
+    </footer>
+
+
+    <div class="backgroundPago" id="pagar">
+        <div class="mainModal">
+
+            <div class="headModal">
+                <div class="imghead">
+                    <img src="../img/llama.png" width="120px" alt="">
+                </div>
+                <div class="exitHead">
+                    <button onclick="cerrarPago()"><img src="../img/iconos/cruz.svg" width="15px" alt=""></button>
+                </div>
+            </div>
+            <div class="espaciador"></div>
+            <div class="mainContenedor" >
+                
+                <div class="contenedorDatos" id="contacto">
+                    <div class="titulomodal">
+                        <h2>Contacto de Viajero</h2>
+                    </div>
+                    <div class="contenedor">
+                        <div class="mainDatosdeContacto">
+                            <div class="datosViajeros">
+                                <form id="formModal" action="#" method="post">
+                                    <div class="formDatosViajeros">
+                                        <label for="nombre">Nombres:</label><br>
+                                        <input type="text" id="nombre" name="nombre" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="apellido">Apellidos:</label> <br>
+                                        <input type="text" id="apellido" name="apellido" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="correo">Correo Electrónico:</label> <br>
+                                        <input type="email" id="correo" name="correo" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="wsp">Número de WhatsApp:</label> <br>
+                                        <input type="tel" id="wsp" name="wsp" required>
+                                    </div>
+                                    <div class="formDatosViajeros">
+                                        <label for="fecha-nacimiento">Fecha de Nacimiento:</label> <br>
+                                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="mainImporte">
+                            <div class="importe">
+                                <div class="headImporte">
+                                    <div class="nombreCompra">
+                                        <p id="viajeModal"> Nombre de Viaje que se está comprando RESPECTIVAMENTE</p>
+                                        <p id="viajerosModal">n° de viajes</p>
+                                    </div>
+                                    <div class="subTotal">
+                                        <p id="precioViajeModal">S/. 00.00</p>
+                                    </div>
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="cuponImporte">
+                                    <div class="cupon">
+                                        <label for="">Promo Cupon</label><br>
+                                        <input type="xd" name="cupon" id="">
+                                        <button disabled> Aplicar</button>
+                                    </div>
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="subTotal">
+                                    <p>Subtotal</p>
+                                    <p id="subTotalModal">S/. 00.00</p> 
+                                </div>
+                                <div class="espaciador"></div>
+                                <div class="totalModal">
+                                    <p>Total(Soles)</p>
+                                    <p id="importeModal">S/. 00.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btnContinuar">
+                        <button onclick="continuar()"> Continuar</button>
+                    </div>
+                </div>
+    
+                <div class="mainContenedorPago">
+                    <div class="mainPago" id="Pago">
+                        <div class="return">
+                            <button onclick="regresarADatos()"><img src="../img/flecha-pequena-izquierda.png" width="15px" alt="">Regresar</button>
+                        </div>
+                        <div class="tajetaDatos">
+                            <h2>OA</h2>
+                        </div>
+                        <div class="detalleYtarjeta">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/viaje.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        const img = localStorage.getItem("imagen");
+        const img1 = localStorage.getItem("imagen1");
+        const img2 = localStorage.getItem("imagen2");
+        const img3 = localStorage.getItem("imagen3");
+        
+         
+        const viaje = localStorage.getItem("viajeSeleccionado");
+        const tituloTicket = localStorage.getItem ("TituloTicket");
+        let precioGuardado = localStorage.getItem("precioViaje");
+
+        const descripcionViaje = localStorage.getItem("descripcionViaje");
+        const descripcion2 = localStorage.getItem("descripcion-2");
+        const descripcion3 = localStorage.getItem("descripcion-3");
+        const dia1 = localStorage.getItem("dia1");
+        const dia2 = localStorage.getItem("dia2");
+        const equipaje = localStorage.getItem("listaEquipaje");
+
+
+        document.getElementById("featured").src = img;
+        document.getElementById("viaje-img1").src = img1;
+        document.getElementById("viaje-img2").src = img2;
+        document.getElementById("viaje-img3").src = img3;
+        
+        document.getElementById("tituloViaje").textContent = `Reservar Viaje a ${viaje}`;
+        document.getElementById("viajeModal").textContent = tituloTicket;
+        document.getElementById("tituloTicket").textContent = tituloTicket;
+
+        document.querySelector(".total span").innerText = "S/ " + precioGuardado;
+        document.getElementById("precioViajeModal").innerText = "S/ " + precioGuardado;
+        document.getElementById("subTotalModal").innerText = "S/ " + precioGuardado;
+        document.getElementById("descripcionViaje").textContent = descripcionViaje;
+        document.getElementById("descripcionViaje-2").textContent = descripcion2;
+        document.getElementById("descripcionViaje-3").textContent = descripcion3;
+        document.getElementById("dia-1").innerHTML = dia1;
+        document.getElementById("dia-2").innerHTML = dia2;
+        document.getElementById("listaEquipaje").innerHTML = localStorage.getItem("listaEquipaje");
+
+
+        
+        const reservarButton = document.getElementById('reservarButton');
+        reservarButton.disabled = true;
+        reservarButton.classList.add('disabled');
+        
+        flatpickr("#date", {
+            dateFormat: "d-m-Y", // Formato DD-MM-YYYY
+            onChange: function(selectedDates, dateStr, instance) {
+                const tituloTicket = document.getElementById('tituloTicket');
+                
+                if (dateStr.trim() !== "") {
+                    // Habilita el botón
+                    reservarButton.disabled = false;
+                    reservarButton.classList.remove('disabled');
+                    
+                    // Actualiza la información en el ticket
+                    // sugerencia para poner fecha debajo de la fecha seleccionada ---- tituloTicket.textContent = `Fecha seleccionada: ${dateStr}`;
+                }else{
+                    reservarButton.disabled = true;
+                    reservarButton.classList.add('disabled');
+                }
+            }
+        });
+
+        function cerrarPago(){
+            var cerrar = document.getElementById('pagar');
+            cerrar.style.display = 'none'
+        }
+
+        function abrirModal(){
+            var cerrar = document.getElementById('pagar');
+            cerrar.style.display = 'block'
+        }
+
+        
+        reservarButton.addEventListener('click', () => {
+            const numberOfForms = parseInt(numforms.value, 10);
+            createForms(numberOfForms);
+        });
+    </script>
+</body>
+</html>

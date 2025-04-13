@@ -1,43 +1,8 @@
-
 document.querySelectorAll('path').forEach(function(path) {
     path.addEventListener('mouseenter', function() {
         this.parentNode.appendChild(this);
     });
 });
-
-//  //
-
-
-const tooltip = document.getElementById('tooltip');
-
-// Función para mostrar el tooltip
-function mostrarTooltip(event, nombre) {
-    tooltip.textContent = nombre;
-    tooltip.style.left = event.pageX + 10 + 'px'; // Posicionar cerca del cursor
-    tooltip.style.top = event.pageY + 10 + 'px';
-    tooltip.style.opacity = 1; // Mostrar el tooltip
-}
-
-
-function ocultarTooltip() {
-    tooltip.style.opacity = 0;
-}
-
-// Agregar eventos a cada path
-document.querySelectorAll('path').forEach(path => {
-    
-    path.addEventListener('mousemove', (event) => {
-        const nombre = path.getAttribute('id'); 
-        mostrarTooltip(event, nombre);
-    });
-
-    // Ocultar el tooltip cuando el cursor salga del path
-    path.addEventListener('mouseleave', ocultarTooltip);
-});
-
-//          //
-
-
 
 let names=[];
 nombreDeptos();
@@ -67,24 +32,37 @@ function textoEntrada(){
         if(depto.substr(0, res.length).toLowerCase()=== res)
         resultadoBusqueda.push(depto);
     })
-        const divv=document.createElement("div");
-        divv.id='resultados';
-        document.querySelector('#buscardiv-contenido').appendChild(divv);
         suggestions(resultadoBusqueda);
 }
 
+// function suggestions(list){
+//     const listsug=document.createElement("ul");
+//     listsug.className='dropdown-menu show position-absolute w-100 top-100';
+//     document.querySelector('#busqueda').appendChild(listsug);
+//     list.forEach((deptos)=>{
+//         const redireccion=document.createElement("a");
+//         redireccion.href=`#contenido-${deptos.toLowerCase()}`;
+//         redireccion.className='link-primary link-underline-opacity-0';
+//         listsug.appendChild(redireccion);
+//         const lis=document.createElement("li");
+//         lis.innerHTML=deptos;
+//         redireccion.appendChild(lis);
+//     })
+// }
 function suggestions(list){
     const listsug=document.createElement("ul");
-    listsug.id="dropdown";
-    document.querySelector('#resultados').appendChild(listsug);
+    listsug.className='dropdown-menu show position-absolute w-100 top-100';
+    document.querySelector('#busqueda').appendChild(listsug);
     list.forEach((deptos)=>{
+
+        const lis=document.createElement("li");
+        lis.className='dropdown-item';
         const redireccion=document.createElement("a");
         redireccion.href=`#contenido-${deptos.toLowerCase()}`;
-        redireccion.className='enlace';
-        listsug.appendChild(redireccion);
-        const lis=document.createElement("li");
-        lis.innerHTML=deptos;
-        redireccion.appendChild(lis);
+        redireccion.className='link-primary link-underline-opacity-0';
+        redireccion.innerHTML=deptos;
+        lis.appendChild(redireccion);
+        listsug.appendChild(lis);
     })
 }
 

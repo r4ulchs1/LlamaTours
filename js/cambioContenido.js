@@ -1,8 +1,11 @@
+function irAviaje() {
+    window.location.href = "viaje.html";
+}
 document.getElementById("btn-laguna69").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Ancash/laguna69.jpg");
-    localStorage.setItem("imagen1", "../img/Ancash/laguna69/laguna691.jpg");
-    localStorage.setItem("imagen2", "../img/Ancash/laguna69/laguna692.jpg");
-    localStorage.setItem("imagen3", "../img/Ancash/laguna69/laguna693.jpg");
+    localStorage.setItem("imagen", "img/detinos/Ancash/laguna69/laguna691.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Ancash/laguna69/laguna691.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ancash/laguna69/laguna692.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ancash/laguna69/laguna693.jpg");
     
     let precioViaje = document.getElementById("laguna69-precio").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -29,14 +32,14 @@ document.getElementById("btn-laguna69").addEventListener("click", function() {
             <li>Medicamentos personales (si es necesario)</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+    irAviaje();
 });
 
 document.getElementById("btn-Huascaran").addEventListener("click", function() {
-    localStorage.setItem("imagen",  "../img/Ancash/huascaran.jpg");
-    localStorage.setItem("imagen1", "../img/Ancash/Huascaran/huascaran1.jpg");
-    localStorage.setItem("imagen2", "../img/Ancash/Huascaran/huascaran2.jpg");
-    localStorage.setItem("imagen3", "../img/Ancash/Huascaran/huascaran3.jpg");
+    localStorage.setItem("imagen",  "img/detinos/Ancash/parqueNacionalHuascaran.jpeg");
+    localStorage.setItem("imagen1", "img/detinos/Ancash/Huascaran/huascaran1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ancash/Huascaran/huascaran2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ancash/Huascaran/huascaran3.jpg");
     
     let precioViaje = document.getElementById("precioViajeHuascaran").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -61,15 +64,15 @@ document.getElementById("btn-Huascaran").addEventListener("click", function() {
             <li>Snacks</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 
 document.getElementById("btn-canonColca").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Arequipa/colca.jpg");
-    localStorage.setItem("imagen1", "../img/Arequipa/Colca/colca1.jpg");
-    localStorage.setItem("imagen2", "../img/Arequipa/Colca/colca2.jpg");
-    localStorage.setItem("imagen3", "../img/Arequipa/Colca/colca3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Arequipa/colca.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Arequipa/Colca/colca1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Arequipa/Colca/colca2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Arequipa/Colca/colca3.jpg");
     
     let precioViaje = document.getElementById("precioViajeColca").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -94,14 +97,14 @@ document.getElementById("btn-canonColca").addEventListener("click", function() {
             <li>Snacks</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-santaCatalina").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Arequipa/santacatalina.png");
-    localStorage.setItem("imagen1", "../img/Arequipa/santacatalina/santacatalina1.jpg");
-    localStorage.setItem("imagen2", "../img/Arequipa/santacatalina/santacatalina2.jpg");
-    localStorage.setItem("imagen3", "../img/Arequipa/santacatalina/santacatalina3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Arequipa/santacatalina.png");
+    localStorage.setItem("imagen1", "img/detinos/Arequipa/santacatalina/santacatalina1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Arequipa/santacatalina/santacatalina2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Arequipa/santacatalina/santacatalina3.jpg");
     
     let precioViaje = document.getElementById("precioViajeSantaCatalina").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -123,14 +126,14 @@ document.getElementById("btn-santaCatalina").addEventListener("click", function(
             <li>Protector solar</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-ciudadAyacucho").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Ayacucho/huamanga.jpg");
-    localStorage.setItem("imagen1", "../img/Ayacucho/ciudaddeayacucho/ciudaddeayacucho1.jpg");
-    localStorage.setItem("imagen2", "../img/Ayacucho/ciudaddeayacucho/ciudaddeayacucho2.jpg");
-    localStorage.setItem("imagen3", "../img/Ayacucho/ciudaddeayacucho/ciudaddeayacucho3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Ayacucho/huamanga.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Ayacucho/ciudaddeayacucho/ciudaddeayacucho1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ayacucho/ciudaddeayacucho/ciudaddeayacucho2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ayacucho/ciudaddeayacucho/ciudaddeayacucho3.jpg");
     
     let precioViaje = document.getElementById("precioViajeHuamanga").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -152,14 +155,14 @@ document.getElementById("btn-ciudadAyacucho").addEventListener("click", function
             <li>Protector solar</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-pampaAyacucho").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Ayacucho/pampaayacucho.jpeg");
-    localStorage.setItem("imagen1", "../img/Ayacucho/pampadeayacucho/pampadeayacucho1.jpg");
-    localStorage.setItem("imagen2", "../img/Ayacucho/pampadeayacucho/pampadeayacucho2.jpg");
-    localStorage.setItem("imagen3", "../img/Ayacucho/pampadeayacucho/pampadeayacucho3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Ayacucho/pampaayacucho.jpeg");
+    localStorage.setItem("imagen1", "img/detinos/Ayacucho/pampadeayacucho/pampadeayacucho1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ayacucho/pampadeayacucho/pampadeayacucho2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ayacucho/pampadeayacucho/pampadeayacucho3.jpg");
     
     let precioViaje = document.getElementById("precioViajePampaAyacucho").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -181,14 +184,14 @@ document.getElementById("btn-pampaAyacucho").addEventListener("click", function(
             <li>Protector solar</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-BanosInca").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Cajamarca/bañosdelinca.jpg");
-    localStorage.setItem("imagen1", "../img/Cajamarca/banosdelinca/banosdelinca1.jpg");
-    localStorage.setItem("imagen2", "../img/Cajamarca/banosdelinca/banosdelinca2.jpg");
-    localStorage.setItem("imagen3", "../img/Cajamarca/banosdelinca/banosdelinca3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Cajamarca/bañosdelinca.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Cajamarca/banosdelinca/banosdelinca1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Cajamarca/banosdelinca/banosdelinca2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Cajamarca/banosdelinca/banosdelinca3.jpg");
     
     let precioViaje = document.getElementById("precioViajeBanosInca").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -211,14 +214,14 @@ document.getElementById("btn-BanosInca").addEventListener("click", function() {
             <li>Cámara fotográfica</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-VentanillasOtuzco").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Cajamarca/otuzco.jpg");
-    localStorage.setItem("imagen1", "../img/Cajamarca/ventanillas/ventanilla1.jpg");
-    localStorage.setItem("imagen2", "../img/Cajamarca/ventanillas/ventanilla2.jpg");
-    localStorage.setItem("imagen3", "../img/Cajamarca/ventanillas/ventanilla3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Cajamarca/otuzco.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Cajamarca/ventanillas/ventanilla1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Cajamarca/ventanillas/ventanilla2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Cajamarca/ventanillas/ventanilla3.jpg");
     
     let precioViaje = document.getElementById("precioViajeVentanillasOtuzco").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -240,15 +243,15 @@ document.getElementById("btn-VentanillasOtuzco").addEventListener("click", funct
             <li>Protector solar</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 
 document.getElementById("btn-machuPicchu").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Cusco/machuPicchu-slider2.jpg");
-    localStorage.setItem("imagen1", "../img/Cusco/machupicchu/machupiccu1.jpg");
-    localStorage.setItem("imagen2", "../img/Cusco/machupicchu/machupiccu2.jpg");
-    localStorage.setItem("imagen3", "../img/Cusco/machupicchu/machupiccu3.jpg"); //regresalo como estaba uwu
+    localStorage.setItem("imagen", "img/detinos/Cusco/machuPicchu-slider2.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Cusco/machupicchu/machupiccu1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Cusco/machupicchu/machupiccu2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Cusco/machupicchu/machupiccu3.jpg"); //regresalo como estaba uwu
     
     let precioViaje = document.getElementById("precioViajeMachuPicchu").innerText;
     let precio = precioViaje.replace(/\D/g, ''); //Con esto se quita cualquier caracter que no sea número
@@ -276,14 +279,14 @@ document.getElementById("btn-machuPicchu").addEventListener("click", function() 
                                                 <li>Dinero en soles</li>
                                             </ul>
                                         `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-ValleSagrado").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Cusco/Valle Sagrado de los Incas.jpg");
-    localStorage.setItem("imagen1", "../img/Cusco/vallesagrado/vallesagrado1.jpg");
-    localStorage.setItem("imagen2", "../img/Cusco/vallesagrado/vallesagrado2.jpg");
-    localStorage.setItem("imagen3", "../img/Cusco/vallesagrado/vallesagrado3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Cusco/Valle Sagrado de los Incas.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Cusco/vallesagrado/vallesagrado1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Cusco/vallesagrado/vallesagrado2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Cusco/vallesagrado/vallesagrado3.jpg");
     
     let precioViaje = document.getElementById("precioViajeValleSagrado").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -306,14 +309,14 @@ document.getElementById("btn-ValleSagrado").addEventListener("click", function()
             <li>Botella de agua</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-Huacachina").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Ica/huacachina.jpg");
-    localStorage.setItem("imagen1", "../img/Ica/huacachina/huacachina1.jpg");
-    localStorage.setItem("imagen2", "../img/Ica/huacachina/huacachina2.jpg");
-    localStorage.setItem("imagen3", "../img/Ica/huacachina/huacachina3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Ica/huacachina.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Ica/huacachina/huacachina1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ica/huacachina/huacachina2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ica/huacachina/huacachina3.jpg");
     
     let precioViaje = document.getElementById("precioViajeHuacachina").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -336,14 +339,14 @@ document.getElementById("btn-Huacachina").addEventListener("click", function() {
             <li>Botella de agua</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-islasBallestas").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Ica/islasballestas.jpg");
-    localStorage.setItem("imagen1", "../img/Ica/islasBallestas/islasballestas1.jpg");
-    localStorage.setItem("imagen2", "../img/Ica/islasBallestas/islasballestas2.jpg");
-    localStorage.setItem("imagen3", "../img/Ica/islasBallestas/islasballestas3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Ica/islasballestas.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Ica/islasBallestas/islasballestas1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Ica/islasBallestas/islasballestas2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Ica/islasBallestas/islasballestas3.jpg");
     
     let precioViaje = document.getElementById("precioViajeIslasBallestas").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -366,15 +369,15 @@ document.getElementById("btn-islasBallestas").addEventListener("click", function
             <li>Binoculares (opcional)</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 
 document.getElementById("btn-lagoJunin").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Junin/lagojunin.jpg");
-    localStorage.setItem("imagen1", "../img/Junin/lagoJunin/lagoJunin1.jpg");
-    localStorage.setItem("imagen2", "../img/Junin/lagoJunin/lagoJunin2.jpg");
-    localStorage.setItem("imagen3", "../img/Junin/lagoJunin/lagoJunin3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Junin/lagojunin.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Junin/lagoJunin/lagoJunin1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Junin/lagoJunin/lagoJunin2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Junin/lagoJunin/lagoJunin3.jpg");
     
     let precioViaje = document.getElementById("precioViajeLagoJunin").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -397,14 +400,14 @@ document.getElementById("btn-lagoJunin").addEventListener("click", function() {
             <li>Binoculares (opcional)</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-chanchan").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/La Libertad/ChanChan.jpg");
-    localStorage.setItem("imagen1", "../img/La Libertad/chanchan/chanchan1.jpg");
-    localStorage.setItem("imagen2", "../img/La Libertad/chanchan/chanchan2.jpg");
-    localStorage.setItem("imagen3", "../img/La Libertad/chanchan/chanchan3.jpg");
+    localStorage.setItem("imagen", "img/detinos/La Libertad/ChanChan.jpg");
+    localStorage.setItem("imagen1", "img/detinos/La Libertad/chanchan/chanchan1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/La Libertad/chanchan/chanchan2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/La Libertad/chanchan/chanchan3.jpg");
     
     let precioViaje = document.getElementById("precioViajeChanChan").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -427,14 +430,14 @@ document.getElementById("btn-chanchan").addEventListener("click", function() {
             <li>Sombrero o gorra</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-huacaLuna").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/La Libertad/huacadelaluna.jpg");
-    localStorage.setItem("imagen1", "../img/La Libertad/huacaDeLaLuna/huacaDeLaLuna1.jpg");
-    localStorage.setItem("imagen2", "../img/La Libertad/huacaDeLaLuna/huacaDeLaLuna2.jpg");
-    localStorage.setItem("imagen3", "../img/La Libertad/huacaDeLaLuna/huacaDeLaLuna3.jpg");
+    localStorage.setItem("imagen", "img/detinos/La Libertad/huacadelaluna.jpg");
+    localStorage.setItem("imagen1", "img/detinos/La Libertad/huacaDeLaLuna/huacaDeLaLuna1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/La Libertad/huacaDeLaLuna/huacaDeLaLuna2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/La Libertad/huacaDeLaLuna/huacaDeLaLuna3.jpg");
     
     let precioViaje = document.getElementById("precioViajeHuacaLuna").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -457,14 +460,14 @@ document.getElementById("btn-huacaLuna").addEventListener("click", function() {
             <li>Sombrero o gorra</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-iquitos").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Loreto/iquitos.jpg");
-    localStorage.setItem("imagen1", "../img/Loreto/iquitos/iquitos1.jpg");
-    localStorage.setItem("imagen2", "../img/Loreto/iquitos/iquitos2.jpg");
-    localStorage.setItem("imagen3", "../img/Loreto/iquitos/iquitos3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Loreto/iquitos.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Loreto/iquitos/iquitos1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Loreto/iquitos/iquitos2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Loreto/iquitos/iquitos3.jpg");
     
     let precioViaje = document.getElementById("precioViajeIquitos").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -487,14 +490,14 @@ document.getElementById("btn-iquitos").addEventListener("click", function() {
             <li>Cámara fotográfica</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-pacaya").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Loreto/pacayasamiria.jpg");
-    localStorage.setItem("imagen1", "../img/Loreto/pacaya/pacayaSamiria1.jpg");
-    localStorage.setItem("imagen2", "../img/Loreto/pacaya/pacayaSamiria2.jpg");
-    localStorage.setItem("imagen3", "../img/Loreto/pacaya/pacayaSamiria3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Loreto/pacayasamiria.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Loreto/pacaya/pacayaSamiria1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Loreto/pacaya/pacayaSamiria2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Loreto/pacaya/pacayaSamiria3.jpg");
     
     let precioViaje = document.getElementById("precioViajePacayaSamiria").innerText;
     let precio = precioViaje.replace(/\D/g, '');
@@ -517,15 +520,15 @@ document.getElementById("btn-pacaya").addEventListener("click", function() {
             <li>Cámara fotográfica</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 
 document.getElementById("btn-islaTaquile").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Puno/islataquile.jpg");
-    localStorage.setItem("imagen1", "../img/Puno/islaTaquile/islataquile1.jpg");
-    localStorage.setItem("imagen2", "../img/Puno/islaTaquile/islataquile2.jpg");
-    localStorage.setItem("imagen3", "../img/Puno/islaTaquile/islataquile3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Puno/islataquile.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Puno/islaTaquile/islataquile1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Puno/islaTaquile/islataquile2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Puno/islaTaquile/islataquile3.jpg");
     
     let precioViaje = document.getElementById("precioViajeIslaTaquile").innerText;
     let precio = precioViaje.replace(/\D/g, ''); 
@@ -550,14 +553,14 @@ document.getElementById("btn-islaTaquile").addEventListener("click", function() 
             <li>Ropa de abrigo (por la tarde puede hacer frío)</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-lagoTiticaca").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/Puno/lagotiticaca.jpg");
-    localStorage.setItem("imagen1", "../img/Puno/lagoTiticaca/lagotiticaca1.jpg");
-    localStorage.setItem("imagen2", "../img/Puno/lagoTiticaca/lagotiticaca2.jpg");
-    localStorage.setItem("imagen3", "../img/Puno/lagoTiticaca/lagotiticaca3.jpg");
+    localStorage.setItem("imagen", "img/detinos/Puno/lagotiticaca.jpg");
+    localStorage.setItem("imagen1", "img/detinos/Puno/lagoTiticaca/lagotiticaca1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/Puno/lagoTiticaca/lagotiticaca2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/Puno/lagoTiticaca/lagotiticaca3.jpg");
     
     let precioViaje = document.getElementById("precioViajeLagoTiticaca").innerText;
     let precio = precioViaje.replace(/\D/g, ''); 
@@ -582,14 +585,14 @@ document.getElementById("btn-lagoTiticaca").addEventListener("click", function()
             <li>Botella de agua</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-rioAbiseo").addEventListener("click", function() {
-    localStorage.setItem("imagen", "../img/San Martin/rioabiseo.jpg");
-    localStorage.setItem("imagen1", "../img/San Martin/rioabiseo/rioabiseo1.jpg");
-    localStorage.setItem("imagen2", "../img/San Martin/rioabiseo/rioabiseo2.jpg");
-    localStorage.setItem("imagen3", "../img/San Martin/rioabiseo/rioabiseo3.jpg");
+    localStorage.setItem("imagen", "img/detinos/San Martin/rioabiseo.jpg");
+    localStorage.setItem("imagen1", "img/detinos/San Martin/rioabiseo/rioabiseo1.jpg");
+    localStorage.setItem("imagen2", "img/detinos/San Martin/rioabiseo/rioabiseo2.jpg");
+    localStorage.setItem("imagen3", "img/detinos/San Martin/rioabiseo/rioabiseo3.jpg");
     
     let precioViaje = document.getElementById("precioViajeRioAbiseo").innerText;
     let precio = precioViaje.replace(/\D/g, ''); 
@@ -615,14 +618,14 @@ document.getElementById("btn-rioAbiseo").addEventListener("click", function() {
             <li>Snacks energéticos</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 
 document.getElementById("btn-Tarapoto").addEventListener("click", function() {
-    localStorage.setItem("imagen","../img/San Martin/tarapoto.jpg");
-    localStorage.setItem("imagen1","../img/San Martin/tarapoto/tarapoto1.jpg");
-    localStorage.setItem("imagen2","../img/San Martin/tarapoto/tarapoto2.jpg");
-    localStorage.setItem("imagen3","../img/San Martin/tarapoto/tarapoto3.jpg");
+    localStorage.setItem("imagen","img/detinos/San Martin/tarapoto.jpg");
+    localStorage.setItem("imagen1","img/detinos/San Martin/tarapoto/tarapoto1.jpg");
+    localStorage.setItem("imagen2","img/detinos/San Martin/tarapoto/tarapoto2.jpg");
+    localStorage.setItem("imagen3","img/detinos/San Martin/tarapoto/tarapoto3.jpg");
     
     let precioViaje = document.getElementById("precioViajeTarapoto").innerText;
     let precio = precioViaje.replace(/\D/g, ''); 
@@ -647,6 +650,6 @@ document.getElementById("btn-Tarapoto").addEventListener("click", function() {
             <li>Snacks</li>
         </ul>
     `);
-    window.location.href = "../html/viaje.html";
+     irAviaje()
 });
 

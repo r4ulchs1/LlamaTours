@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LlamaTours</title>
+  <link rel="icon" type="image/x-icon" href="../img/llamaBase.png">
+  <link rel="stylesheet" href="css/nosotros.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body  class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-blur">
+            <div class="container">
+                <!-- LOGO DE LA PAGINA -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/index/header/llama.png" alt="Llama Tours" height="70px">
+                </a>
+                <!-- EL CUADRO CON 3 LINEAS -->
+                <BUtton class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </BUtton>
+
+                <!-- EL NAV CON LAS PESTAÑAS -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul id="menuu" class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-dark fw-bold">Inicio</a></li>
+                        <li class="nav-item"><a href="buscador.html" class="nav-link text-dark fw-bold">Viajes</a></li>
+                        <li class="nav-item"><a href="contactanos.html" class="nav-link text-dark fw-bold">Contacto</a></li>
+                        <li class="nav-item"><a href="SobreNosotros.html" class="nav-link text-dark fw-bold">Sobre Nosotros</a></li>
+                        <li id="change" class="nav-item">
+                            <button id="btnIngresar" type="button" class="btn ms-3 fw-bold" style="background-color: rgb(226, 226, 4); color: #000;" data-bs-toggle="modal" data-bs-target="#loginUsuarios" onclick="LoginToggle()">
+                                <i class="bi bi-box-arrow-in-left"></i> Ingresar
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--FORMULARIO LOGIN/REGISTER-->
+
+    <form class="modal fade border border-secondary rounded" tabindex="-1" id="loginUsuarios">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                    
+                </div>
+                <div class="modal-body d-flex">
+                    <form>
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <input type="email" class="form-control mb-2" id="loginGmail" placeholder="Correo Electronico" required>
+                            <input type="password" class="form-control" id="loginContrasenia" class="" placeholder="Password" required>
+                            <a href="#">Olvidé mi contraseña</a>
+                            <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Ingresar</button>
+                        </div>
+                        <img class="w-50" src="img/loginAndRegister/llamitaLogin.gif" alt="llama">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <label class="form-label">¿Nuevo usuario?</label>
+                    <a role="button" data-bs-toggle="modal" data-bs-target="#registroUsuarios" onclick="toggleForms()">Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form class="modal fade border border-secondary rounded" tabindex="-1" id="registroUsuarios">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                    
+                </div>
+                <div class="modal-body d-flex">
+                    <form>
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <input type="text" class="form-control mb-2" id="usrGmail" placeholder="Correo Electrónico">
+                            <input type="text" class="form-control mb-2" id="usrName" placeholder="Nombres y Apellidos">
+                            <input type="text" class="form-control mb-2" id="usrPhone" placeholder="Numero de Celular">
+                            <input type="password" class="form-control mb-2"id="usrContrasenia" placeholder="Ingrese su contraseña">
+                            <button class="btn btn-primary" type="submit" data-bs-dismiss="modal" >Registrarse</button>
+                        </div>
+                        <img class="w-50" src="img/loginAndRegister/llamitaLogin.gif" alt="llama">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <label class="form-label">¿Ya registrado?</label>
+                    <a role="button" data-bs-toggle="modal" data-bs-target="#loginUsuarios" onclick="toggleForms()">Ya soy usuario</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!--FIN LOGIN / REGISTER-->
+
+    <div class="bg-image-section-comun img-nosotros text-white">
+        <div class="container-fluid p-0 h-100">
+            <div class="row g-0 h-100 ">
+                <!-- Primera mitad -->
+                <!--<div class="col-md-6 position-relative pt-5 mt-5 bg-dark opacity-75 min-vh-100">-->
+                <!-- Capa oscura con opacidad --> 
+                <div class="col-md-6 position-relative bg-dark bg-opacity-75 h-100 d-flex flex-column justify-content-center px-5">
+                    <h1 class="fw-bold display-4">SOBRE NOSOTROS</h1>
+                    <p class="mt-3 fs-5">
+                        Somos una destacada empresa de turismo con 15 años de experiencia en el mercado, especializada en ofrecer diversos viajes guiados al interior del Perú. Reconocida por Tripadvisor con el premio "Travelers' Choice Experiences" en el año 2019 por su excelencia en el servicio al cliente, la empresa se enorgullece de haber sido destacada en múltiples ocasiones por su compromiso con la calidad y la autenticidad.
+                    </p>
+                </div>
+                
+                <!-- Segunda mitad (solo imagen, sin contenido) -->
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-image-section-comun img-mision text-white">
+        <div class="container-fluid p-0 h-100">
+            <div class="row g-0 h-100 ">
+                <!-- Primera mitad vacía -->
+            <div class="col-md-6"></div>
+            
+            <!-- Segunda mitad con fondo oscuro y texto -->
+            <div class="col-md-6 bg-dark bg-opacity-75 h-100 d-flex flex-column justify-content-center px-5">
+                <h1 class="display-5 fw-bold text-uppercase">MISIÓN</h1>
+                <p class="fs-5 mt-3">
+                    Brindar experiencias de viaje auténticas y memorables por el Perú, con un enfoque en la calidad, la cultura y la sostenibilidad. A través de un servicio personalizado y de alta calidad, buscamos conectar a nuestros clientes con la riqueza natural, histórica y cultural del país, garantizando seguridad, confort y satisfacción en cada uno de nuestros recorridos. Promovemos el respeto por las comunidades locales y la protección del medio ambiente, fomentando un turismo responsable que deje una huella positiva en cada destino.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-image-section-comun img-vision text-white">
+        <div class="container-fluid p-0 h-100">
+            <div class="row g-0 h-100 ">
+                <!-- Primera mitad -->
+                <!--<div class="col-md-6 position-relative pt-5 mt-5 bg-dark opacity-75 min-vh-100">-->
+                <!-- Capa oscura con opacidad --> 
+                <div class="col-md-6 position-relative bg-dark bg-opacity-75 h-100 d-flex flex-column justify-content-center px-5">
+                    <h1 class="fw-bold display-4">VISIÓN</h1>
+                    <p class="mt-3 fs-5">
+                        Convertirnos en la empresa líder de turismo en Perú, reconocida a nivel mundial por nuestras experiencias únicas y sostenibles, nuestro compromiso con la autenticidad, y la excelencia en el servicio al cliente. Aspiramos a ser la primera opción para aquellos que desean descubrir las maravillas de Perú, promoviendo un turismo responsable que beneficie a las comunidades locales y preserve el patrimonio cultural y natural del país.
+                    </p>
+                </div>
+                
+                <!-- Segunda mitad (solo imagen, sin contenido) -->
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center mt-4 ">
+    <div>
+        <img src="img/index/header/llama.png" width="120px" alt="">
+    </div>
+    <div class="container card-group">
+        <div class="col-md-6">
+            <div class="card bg-dark">
+                <div class="card-body text-start">
+                    <h2 class="text-warning">Llama Tours</h2>
+                    <p class="text-secondary">Somos una destacada empresa de turismo con 15 años de experiencia en el mercado...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark">
+                <div class="card-body text-start">
+                    <h2 class="text-warning">Links Rapidos</h2>
+                    <ul class="list-group">
+                        <li><a class="link-secondary link-underline-opacity-0" href="index.html">Inicio</a></li>
+                        <li><a class="link-secondary link-underline-opacity-0" href="buscador.html">Viajes</a></li>
+                        <li><a class="link-secondary link-underline-opacity-0" href="contactanos.html">Contacto</a></li>
+                        <li><a class="link-secondary link-underline-opacity-0" href="SobreNosotros.html">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark">
+                <div class="card-body text-start">
+                    <h2 class="text-warning">Contactanos</h2>
+                    <ul class="list-group">
+                        <li><a class="link-secondary link-underline-opacity-0" href="https://wa.me/51900460347" target="_blank"><i class="bi bi-telephone-fill" style="width: 20px;"></i> +51 900460347</a></li>
+                        <li><a class="link-secondary link-underline-opacity-0" href="mailto:LlamaTours@viajes.com"><i class="bi bi-envelope-fill" style="width: 20px;"></i> LlamaTours@viajes.com</a></li>
+                        <li><a class="link-secondary link-underline-opacity-0" href="https://www.google.com/maps?q=Av.+28+de+Julio+-+La+Victoria+-+Lima" target="_blank"><i class="bi bi-geo-alt-fill" style="width: 20px;"></i> Av. 28 de Julio - La Victoria - Lima</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-secondary">Copyright &copy; 2024 All Rights Reserved by LlamaTours</p>
+</footer>
+
+  <!-- Scripts de Bootstrap -->
+    <script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/usuarios.js"></script>
+</body>
+</html>

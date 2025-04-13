@@ -63,7 +63,7 @@ function renderizarUsuarioLogueado(usuario) {
     cerrarsesion.innerHTML = `
         <a class="nav-link dropdown-toggle gap-0" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
             <div class="d-inline-flex p-0 align-items-center ">
-                <img src="../img/iconos/avatar-usuario.png" style="width: 50px; height: 50px;">
+                <img src="img/loginAndRegister/avatar-usuario.png" style="width: 50px; height: 50px;">
                 <div class="d-inline-flex flex-column p-2">
                     <p class="mb-0">${usuario.nombre}</p>
                     <p class="mb-0">${usuario.gmail}</p>
