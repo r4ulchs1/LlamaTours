@@ -11,54 +11,54 @@
                 });
             });
 
-            function LoginToggle() {
-                var container = document.querySelector('.container');
-                var loginPopup = document.querySelector('.login-form');
-                var registerPopup = document.querySelector('.registro-form');
+            // function LoginToggle() {
+            //     var container = document.querySelector('.container');
+            //     var loginPopup = document.querySelector('.login-form');
+            //     var registerPopup = document.querySelector('.registro-form');
                 
                 
-                if (loginPopup.classList.contains('active')) {
-                    loginPopup.classList.remove('active'); 
+            //     if (loginPopup.classList.contains('active')) {
+            //         loginPopup.classList.remove('active'); 
                     
-                    if (!registerPopup.classList.contains('active')) {
-                        container.classList.remove('active'); 
-                    }
-                } else {
-                    loginPopup.classList.add('active');
-                    container.classList.add('active'); 
-                }
-            }
+            //         if (!registerPopup.classList.contains('active')) {
+            //             container.classList.remove('active'); 
+            //         }
+            //     } else {
+            //         loginPopup.classList.add('active');
+            //         container.classList.add('active'); 
+            //     }
+            // }
             
-            function RegistroToggle() {
-                var container = document.querySelector('.container');
-                var loginPopup = document.querySelector('.login-form');
-                var registerPopup = document.querySelector('.registro-form');
+            // function RegistroToggle() {
+            //     var container = document.querySelector('.container');
+            //     var loginPopup = document.querySelector('.login-form');
+            //     var registerPopup = document.querySelector('.registro-form');
                 
                 
-                if (registerPopup.classList.contains('active')) {
-                    registerPopup.classList.remove('active'); 
+            //     if (registerPopup.classList.contains('active')) {
+            //         registerPopup.classList.remove('active'); 
                     
-                    if (!loginPopup.classList.contains('active')) {
-                        container.classList.remove('active'); 
-                    }
-                } else {
-                    registerPopup.classList.add('active'); 
-                    container.classList.add('active');
-                }
-            }
+            //         if (!loginPopup.classList.contains('active')) {
+            //             container.classList.remove('active'); 
+            //         }
+            //     } else {
+            //         registerPopup.classList.add('active'); 
+            //         container.classList.add('active');
+            //     }
+            // }
             
             
-            function toggleForms() {
-                var loginPopup = document.querySelector('.login-form');
-                var registerPopup = document.querySelector('.registro-form');
+            // function toggleForms() {
+            //     var loginPopup = document.querySelector('.login-form');
+            //     var registerPopup = document.querySelector('.registro-form');
             
                
-                if (loginPopup.classList.contains('active')) {
-                    LoginToggle();
-                    RegistroToggle(); 
-                } else {
-                    RegistroToggle(); 
-                    LoginToggle(); 
-                }
-            }
+            //     if (loginPopup.classList.contains('active')) {
+            //         LoginToggle();
+            //         RegistroToggle(); 
+            //     } else {
+            //         RegistroToggle(); 
+            //         LoginToggle(); 
+            //     }
+            // }
          
